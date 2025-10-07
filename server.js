@@ -75,7 +75,7 @@ const sendConfirmationEmail = async (userEmail, type, userName = "") => {
 
         <p style="margin-top: 25px; font-size: 15px; color: #333;">
           Best regards,<br>
-          <strong>Dotcomdotin</strong> 🍴
+          <strong>Dotcomdotin</strong>
         </p>
       </div>
 
@@ -86,7 +86,7 @@ const sendConfirmationEmail = async (userEmail, type, userName = "") => {
         font-size: 13px;
         color: #777;
       ">
-        © ${new Date().getFullYear()} Panda Foods. All rights reserved.
+        © ${new Date().getFullYear()} Dotcomdotin. All rights reserved.
       </div>
     </div>
   </div>
@@ -126,3 +126,4 @@ app.post("/api/form/:type", async (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
