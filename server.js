@@ -97,6 +97,10 @@ const sendConfirmationEmail = async (userEmail, type, userName = "") => {
   await transporter.sendMail(mailOptions);
 };
 
+app.get("/", (req,res) => {
+  res.send("Welcome To Dotcomdotin API");
+});
+
 // 🧾 Main endpoint — Handles multiple form types
 app.post("/api/form/:type", async (req, res) => {
   const { type } = req.params;
@@ -126,4 +130,5 @@ app.post("/api/form/:type", async (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
